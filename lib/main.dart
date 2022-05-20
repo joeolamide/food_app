@@ -7,7 +7,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'DeliMeals',
+      //title: 'DeliMeals',
       theme: ThemeData(
         primarySwatch: Colors.pink,
         accentColor: Colors.amber,
@@ -20,11 +20,12 @@ class MyApp extends StatelessWidget {
           bodyText2: TextStyle(
             color: Color.fromRGBO(20, 51, 51, 1),
           ),
-          title: TextSytle(
+          headline6: TextStyle(
             fontSize: 20,
             fontFamily: 'RobotoCondensed',
-            fontWeight:20,
-          )),
+            fontWeight: FontWeight.bold,
+          )
+        ),
       ),
       home: CategoriesScreen(),
     );
