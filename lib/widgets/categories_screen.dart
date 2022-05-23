@@ -8,12 +8,7 @@ class CategoriesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //we use gridview since the items will lie next to each other.
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('DeliMeal'),
-      ),
-
-        body:GridView(
+    return GridView(
           padding: const EdgeInsets.all(25),
           children: DUMMY_CATEGORIES
             .map(
@@ -29,7 +24,7 @@ class CategoriesScreen extends StatelessWidget {
             childAspectRatio: 3 / 2,
             mainAxisSpacing: 20,
           ),
-        ),
+
     );
   }
 }
