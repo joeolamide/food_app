@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 import 'package:food_app/widgets/drawer.dart';
@@ -33,7 +35,7 @@ class _FilterScreenState extends State<FilterScreen> {
       String title,
       String description,
       bool currentValue,
-      Function updateValue,
+     final void Function (bool) updateValue,
       ) {
     return SwitchListTile(
       title: Text(title),
@@ -41,7 +43,7 @@ class _FilterScreenState extends State<FilterScreen> {
       subtitle: Text(
         description,
       ),
-      onChanged: updateValue,
+      onChanged:  updateValue,
     );
   }
 

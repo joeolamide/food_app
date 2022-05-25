@@ -14,7 +14,7 @@ class TabsScreen extends StatefulWidget {
 }
 
 class _TabsScreenState extends State<TabsScreen> {
-    List<Map<String, dynamic>> _pages;
+    List<Map<String, dynamic>>?  _pages;
    int _selectedPageIndex = 0;
 
    @override
@@ -44,12 +44,12 @@ class _TabsScreenState extends State<TabsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(_pages[_selectedPageIndex]['label']),
+        title: Text(_pages![_selectedPageIndex]['label']),
 
            ),
 
           drawer: MainDrawer(),
-          body: _pages[_selectedPageIndex]['page'],
+          body: _pages![_selectedPageIndex]['page'],
           bottomNavigationBar: BottomNavigationBar(
             onTap: _selectPage,
             backgroundColor: Theme.of(context).primaryColor,
